@@ -4,7 +4,7 @@ async function getData(date) {
     const atcUrl = `https://atcsports.io/results?horario=18%3A30&tipoDeporte=7&dia=${date}&placeId=69y7pkxfg&locationName=CABA%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires%2C+Argentina`
     const browser = await chromium.launch({
         headless: true,
-        args: ['--no-sandbox', '--disable-dev-shm-usage']
+        args: ["--no-sandbox", "--disable-dev-shm-usage"]
     });
     console.log(atcUrl)
     const context = await browser.newContext()
